@@ -15,15 +15,20 @@ class TextField extends JFrame{
     JTextArea textArea;
     JScrollPane scrollpane;
     JMenuBar menuBar;
-    JMenu menu;
+    JMenu FileMenu;
     JMenuItem newAction,saveAction,openAction;
     public TextField(){
         super("untitled");
         setSize(600,600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         textArea = new JTextArea();
+        textArea.setBackground(Color.DARK_GRAY);
+        textArea.setForeground(Color.WHITE);
         textArea.setLineWrap(true);
-        textArea.setFont(new Font("Serif",Font.ITALIC,15));
+        textArea.setFont(new Font("Serif",Font.PLAIN,15));
+        //System.out.println("tab size: "+textArea.getTabSize());
+        //textArea.paste();
+        //textArea.copy();
         scrollpane = new JScrollPane(textArea);
         getContentPane().add(scrollpane);
         setVisible(true);
@@ -31,7 +36,8 @@ class TextField extends JFrame{
     }
     public void CreateMenu(){
             menuBar = new JMenuBar();
-            menu = new JMenu("FILE");
+            FileMenu = new JMenu("File");
+            JMenu ThemeMenu = new JMenu("Prefrences");
             newAction = new JMenuItem("New");
             newAction.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent e){
@@ -43,12 +49,13 @@ class TextField extends JFrame{
                 public void actionPerformed(ActionEvent e){
                     JFileChooser fileChooser = new JFileChooser();
                     fileChooser.setDialogTitle("Specify new File");
-                    fileChooser.setSelectedFile(new File("file1"));
+                    fileChooser.setSelectedFile(new File("untitled"));
                     int userSelection = fileChooser.showSaveDialog(fileChooser);
                     if(userSelection == JFileChooser.APPROVE_OPTION){
                         File file = fileChooser.getSelectedFile();
                         BufferedWriter  writer = null;
                         try{
+                            setTitle( file.getName());
                             writer = new BufferedWriter(new FileWriter(file.getAbsolutePath()+""));
                             writer.write(textArea.getText());
                             writer.close();
@@ -67,6 +74,7 @@ class TextField extends JFrame{
                         File file = fileChooser.getSelectedFile();
                         String filename = fileChooser.getSelectedFile().getName();
                         System.out.println(filename);
+                        setTitle(filename);
                         try {
                             FileReader fr = new FileReader(file);
                             BufferedReader br = new BufferedReader(fr);
@@ -82,12 +90,46 @@ class TextField extends JFrame{
                     }
                 }
             });
-            menuBar.add(menu);
-            menu.add(newAction);
-            menu.add(saveAction);
-            menu.add(openAction);
+
+            JMenu TabSizeMenu = new JMenu("Tab Size");
+            ThemeMenu.add(TabSizeMenu);
+            ButtonGroup group = new ButtonGroup();
+            MyRadioButtonMenuItem radioMenuItem = new MyRadioButtonMenuItem("2");
+            TabSizeMenu.add(radioMenuItem);
+            group.add(radioMenuItem);
+            radioMenuItem = new MyRadioButtonMenuItem("4");
+            TabSizeMenu.add(radioMenuItem);
+            group.add(radioMenuItem);
+            radioMenuItem = new MyRadioButtonMenuItem("8");
+            radioMenuItem.setSelected(true);
+            TabSizeMenu.add(radioMenuItem);
+            group.add(radioMenuItem);
+
+
+            menuBar.add(FileMenu);
+            FileMenu.add(newAction);
+            FileMenu.add(saveAction);
+            FileMenu.add(openAction);
+            menuBar.add(ThemeMenu);
+            ThemeMenu.add(TabSizeMenu);
             setJMenuBar(menuBar);
     }      
+    private class MyRadioButtonMenuItem extends JRadioButtonMenuItem
+      implements ActionListener, ItemListener {
+      public MyRadioButtonMenuItem(String text) {
+         super(text);
+         addActionListener(this);
+         addItemListener(this);
+      }
+      public void actionPerformed(ActionEvent e) {
+         System.out.println("Item clicked: "+e.getActionCommand());
+         textArea.setTabSize(Integer.parseInt(e.getActionCommand()));
+      }
+      public void itemStateChanged(ItemEvent e) {
+         System.out.println("State changed: "+e.getStateChange()
+            +" on "+((MyRadioButtonMenuItem) e.getItem()).getText());
+      }
+   }
 }
 
 public class TextEditor{
