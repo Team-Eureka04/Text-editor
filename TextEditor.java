@@ -24,6 +24,7 @@ class TextField extends JFrame{
         textArea = new JTextArea();
         textArea.setBackground(Color.DARK_GRAY);
         textArea.setForeground(Color.WHITE);
+        textArea.setCaretColor(Color.WHITE);
         textArea.setLineWrap(true);
         textArea.setFont(new Font("Serif",Font.PLAIN,15));
         //System.out.println("tab size: "+textArea.getTabSize());
