@@ -1,6 +1,1 @@
-TextEditor.class
-TextField.class
-TextField$1.class
-TextField$2.class
-TextField$3.class
-TextField$MyRadioButtonMenuItem.class
+*.class
