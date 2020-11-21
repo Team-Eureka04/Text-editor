@@ -1,0 +1,12 @@
+<?xml version="1.0"?>  
+<Themes>  
+    <Font>  
+        <Color>#ffffff</Color>  
+        <Size>20</Size>  
+    </Font>  
+      
+    <Editor>  
+        <Background>#000000</Background>  
+        <CurrentLineHighlight>#27262b</CurrentLineHighlight>  
+    </Editor>  
+</Themes>  
