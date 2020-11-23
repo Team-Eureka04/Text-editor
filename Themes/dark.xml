@@ -6,7 +6,8 @@
     </Font>  
       
     <Editor>  
-        <Background>#000000</Background>  
-        <CurrentLineHighlight>#27262b</CurrentLineHighlight>  
+        <Background>#303030</Background>  
+        <CurrentLineHighlight>#27262b</CurrentLineHighlight>
+        <CarretColor>#ffffff</CarretColor>  
     </Editor>  
 </Themes>  

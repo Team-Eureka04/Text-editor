@@ -44,7 +44,7 @@ public class TextField extends JFrame {
         setSize(900, 900);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        theme = new Theme("color");
+        theme = new Theme("light");
         textArea = new RSyntaxTextArea();
         textArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
         textArea.setCodeFoldingEnabled(true);
@@ -52,7 +52,7 @@ public class TextField extends JFrame {
 
         // textArea.setBackground(Color.decode(theme.BackgroundColor));
         // textArea.setForeground(Color.decode(theme.FontColor));
-        // textArea.setCaretColor(Color.BLACK);
+        // textArea.setCaretColor(Color.decode(theme.CarretColor));
         textArea.setAutoIndentEnabled(true);
         // textArea.setCurrentLineHighlightColor(Color.decode("#262626"));
         textArea.setLineWrap(true);
@@ -183,7 +183,7 @@ public class TextField extends JFrame {
         textArea.setBackground(Color.decode(theme.BackgroundColor));
         textArea.setForeground(Color.decode(theme.FontColor));
         textArea.setFont(new Font("Serif", Font.PLAIN, theme.FontSize));
-
+        textArea.setCaretColor(Color.decode(theme.CarretColor));
     }
 
     private class MyRadioButtonMenuItem extends JRadioButtonMenuItem implements ActionListener, ItemListener {

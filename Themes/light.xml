@@ -8,5 +8,6 @@
     <Editor>  
         <Background>#ffffff</Background>  
         <CurrentLineHighlight>#f5deb3</CurrentLineHighlight>  
+        <CarretColor>#000000</CarretColor>
     </Editor>  
 </Themes>  

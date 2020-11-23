@@ -11,6 +11,7 @@ public class Theme {
     public String FontColor;
     public String BackgroundColor;
     public String CurrentLineHighlightColor;
+    public String CarretColor;
     public Vector<String> listThemes = new Vector<String>();
 
     public Theme(String ThemeName) {
@@ -57,6 +58,8 @@ public class Theme {
                     Element eElement = (Element) node;
                     BackgroundColor = eElement.getElementsByTagName("Background").item(0).getTextContent();
                     CurrentLineHighlightColor = eElement.getElementsByTagName("CurrentLineHighlight").item(0)
+                            .getTextContent();
+                    CarretColor = eElement.getElementsByTagName("CarretColor").item(0)
                             .getTextContent();
                 }
             }
