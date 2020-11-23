@@ -34,7 +34,7 @@
 To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer. From your command line:
 
 ```bash
-# Below commands are Tried and Tested on Linux OS
+# Below commands are Tried and Tested on Linux and Windows OS 
 
 # Clone this repository
 $ git clone https://github.com/Team-Eureka04/Text-editor
