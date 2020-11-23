@@ -1,7 +1,6 @@
-
 <h1 align="center">
   <br>
-  <img src="track-karona.png" alt="Text Editor" width="550">
+  Text Editor
   <br>
 </h1>
 
@@ -20,13 +19,11 @@
 <img src="img/screenshot1.png" width="100%">
 <img src="img/screenshot2.png" width="100%">
 
-
-
 ## Key Features
 
-* ### Syntax Highlighting
-* ### Custom Themes
-* ### Cross Platform
+- ### Syntax Highlighting
+- ### Custom Themes
+- ### Cross Platform
   - Windows, Linux ready.
 
 ## How To Use
@@ -34,7 +31,7 @@
 To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer. From your command line:
 
 ```bash
-# Below commands are Tried and Tested on Linux and Windows OS 
+# Below commands are Tried and Tested on Linux and Windows OS
 
 # Clone this repository
 $ git clone https://github.com/Team-Eureka04/Text-editor
@@ -57,12 +54,14 @@ $ javac -cp ".;rsyntaxtexteditor.jar" TextEditor.java
 $ java -classpath rsyntaxtextarea.jar;. TextEditor
 ```
 
-
 ### Contributors
 
 - [@nis130](https://github.com/nis130)
 - [@alisolanki](https://github.com/alisolanki)
 - [@manan001022j](https://github.com/manan001022j)
+
 ---
+
 ## Aim
+
 This project was part of our `SY OOPM (object oriented programming and methodology)` mini project submission.

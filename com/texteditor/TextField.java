@@ -6,24 +6,12 @@ import javax.swing.*;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.filechooser.*;
 import java.io.*;
 import java.io.BufferedReader;
-import java.util.Vector;
-
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
 import javax.swing.text.Document;
 import javax.swing.text.BadLocationException;
-import javax.swing.text.DocumentFilter;
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.AttributeSet;
 import org.fife.ui.rsyntaxtextarea.*;
 import org.fife.ui.rtextarea.*;
-import javax.swing.text.Element;
-// import com.texteditor.Theme;
-
-import javax.swing.event.*;
 
 public class TextField extends JFrame {
 
