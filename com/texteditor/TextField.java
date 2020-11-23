@@ -21,7 +21,7 @@ import javax.swing.text.AttributeSet;
 import org.fife.ui.rsyntaxtextarea.*;
 import org.fife.ui.rtextarea.*;
 import javax.swing.text.Element;
-import com.texteditor.Theme;
+// import com.texteditor.Theme;
 
 import javax.swing.event.*;
 
@@ -48,13 +48,10 @@ public class TextField extends JFrame {
         textArea = new RSyntaxTextArea();
         textArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
         textArea.setCodeFoldingEnabled(true);
-        SimpleAttributeSet attributeSet = new SimpleAttributeSet();
-        StyleConstants.setForeground(attributeSet, Color.RED);
-        StyleConstants.setBold(attributeSet, true);
-        textArea.setCurrentLineHighlightColor(Color.decode(theme.CurrentLineHighlightColor));
+        // textArea.setCurrentLineHighlightColor(Color.decode(theme.CurrentLineHighlightColor));
 
-        textArea.setBackground(Color.decode(theme.BackgroundColor));
-        textArea.setForeground(Color.decode(theme.FontColor));
+        // textArea.setBackground(Color.decode(theme.BackgroundColor));
+        // textArea.setForeground(Color.decode(theme.FontColor));
         // textArea.setCaretColor(Color.BLACK);
         textArea.setAutoIndentEnabled(true);
         // textArea.setCurrentLineHighlightColor(Color.decode("#262626"));

@@ -7,6 +7,6 @@
       
     <Editor>  
         <Background>#ffffff</Background>  
-        <CurrentLineHighlight>#f72f2b</CurrentLineHighlight>  
+        <CurrentLineHighlight>#f5deb3</CurrentLineHighlight>  
     </Editor>  
 </Themes>  

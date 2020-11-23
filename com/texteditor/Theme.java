@@ -21,7 +21,7 @@ public class Theme {
 
     private void ExtractThemeNames() {
         try {
-            File dir = new File("/home/nishit/Documents/dev/Text-editor/Themes");
+            File dir = new File("Themes");
 
             File contents[] = dir.listFiles();
             for (File file : contents) {
@@ -34,7 +34,7 @@ public class Theme {
 
     private void ExtractThemes(String ThemeName) {
         try {
-            File file = new File("/home/nishit/Documents/dev/Text-editor/Themes/" + ThemeName + ".xml");
+            File file = new File("Themes/" + ThemeName + ".xml");
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = factory.newDocumentBuilder();
             Document doc = db.parse(file);
