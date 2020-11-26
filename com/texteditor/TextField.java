@@ -32,10 +32,15 @@ public class TextField extends JFrame {
         setSize(900, 900);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // SyntaxScheme scheme = new SyntaxScheme(true);
+        // Style dataTypeStyle = new Style(Color.BLUE);
+        // scheme.setStyle(TokenTypes.DATA_TYPE, dataTypeStyle);
+
         theme = new Theme("light");
         textArea = new RSyntaxTextArea();
         textArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_JAVA);
         textArea.setCodeFoldingEnabled(true);
+
         // textArea.setCurrentLineHighlightColor(Color.decode(theme.CurrentLineHighlightColor));
 
         // textArea.setBackground(Color.decode(theme.BackgroundColor));
@@ -77,7 +82,6 @@ public class TextField extends JFrame {
         });
 
         for (String themeName : theme.listThemes) {
-            System.out.println(themeName);
             ThemeNameMenu = new JMenuItem(themeName);
             ThemeMenu.add(ThemeNameMenu);
 
@@ -122,6 +126,7 @@ public class TextField extends JFrame {
                     String filename = fileChooser.getSelectedFile().getName();
                     System.out.println(filename);
                     setTitle(filename);
+                    textArea.setText("");
                     try {
                         FileReader fr = new FileReader(file);
                         BufferedReader br = new BufferedReader(fr);
@@ -164,6 +169,16 @@ public class TextField extends JFrame {
     }
 
     void ChangeTheme(String ThemeName) {
+        if (ThemeName.equals("dark")) {
+            SyntaxScheme scheme = new SyntaxScheme(true);
+            Style dataTypeStyle = new Style(Color.decode("#66D8EE"));
+            Style FunctionStyle = new Style(Color.decode("#66D8EE"));
+            Style KeywordStyle = new Style(Color.decode("#EB484B"));
+            scheme.setStyle(TokenTypes.DATA_TYPE, dataTypeStyle);
+            scheme.setStyle(TokenTypes.FUNCTION, FunctionStyle);
+            scheme.setStyle(TokenTypes.RESERVED_WORD, KeywordStyle);
+            textArea.setSyntaxScheme(scheme);
+        }
         theme = new Theme(ThemeName);
         System.out.println("Theme Change Called " + ThemeName);
         System.out.println("Theme Background " + theme.BackgroundColor);

@@ -6,7 +6,7 @@ public class TextEditor {
         try {
             new TextField();
         } catch (BadLocationException e) {
-            System.out.println("Error bad location " + e);
+            System.out.println("Error bad lxocation " + e);
         }
     }
 }
