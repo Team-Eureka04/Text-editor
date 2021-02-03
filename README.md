@@ -58,7 +58,7 @@ $ java -classpath rsyntaxtextarea.jar;. TextEditor
 
 - [@nis130](https://github.com/nis130)
 - [@alisolanki](https://github.com/alisolanki)
-- [@manan001022j](https://github.com/manan001022j)
+- [@mrpandya](https://github.com/mrpandya)
 
 ---
 
