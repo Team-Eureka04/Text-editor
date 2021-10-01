@@ -8,8 +8,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=round-square"
          alt="PR">
-    <img href="http://hits.dwyl.com/nis130/Track-Karona" src="http://hits.dwyl.com/Team-Eureka04/Text-editor.svg"
-         alt="hits">
+    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fnis130%2FText-editor%2F&count_bg=%2365A633&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </p>
 
 <p align="center">
